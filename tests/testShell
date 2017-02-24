@@ -1,5 +1,19 @@
 #!/bin/sh
 
+# What can do for shell?
+1. unit command.
 sh="more test"
-echo $sh
+echo $sh, ls, cp, mv, head, tail, sed, awk,
+
+2. pipe.
+grep "hello" file.txt | wc -l
+>
+>>
+tar -zcvf name.tar.gz `find . -mtime -1 -type f -print`
+
+3. programming.
+if [ -f "somefile" ]; then
+elif ; then
+else
+fi
 
