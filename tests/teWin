@@ -4,3 +4,12 @@
 
 // 问题现场记录工具
 psr
+
+// 卸载程序界面
+appwiz.cpl
+
+// 系统配置界面
+msconfig
+
+// 快速进入控制面板
+cmd	control

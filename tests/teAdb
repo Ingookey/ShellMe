@@ -1,7 +1,4 @@
 
-// Windows缓存文件位置
-%temp%
-
 // Device shutdown
 adb shell reboot -p
 
