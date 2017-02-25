@@ -1,0 +1,18 @@
+
+// Windows缓存文件位置
+%temp%
+
+// Device shutdown
+adb shell reboot -p
+
+// 开启/关闭adb服务
+adb start-server
+adb kill-server
+
+// Install/Uninstall apk
+adb install -r xxx.apk 	 [-r: 保留已设定数据，重新安装apk]
+adb uninstall -k xxx.apk [-k: 卸载软件但是保留配置和缓存文件]
+
+// Grank/Revoke permission
+adb shell pm grant com.android.gallery3d android.permission.READ_CONTACTS
+adb shell pm revoke com.android.gallery3d android.permission.READ_CONTACTS
