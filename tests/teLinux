@@ -36,13 +36,16 @@ find / -type d -name "dir*" -exec rm -rf {} \;
 find / -type f -empty			//查找空文件，d 空目录
 
 
+Git
 Diff
-diff file.1 file.2 	// -y, -c
+diff file.1 file.2 -y 	// -y 并排展示, -c 横排展示
 diff3 
 
-Git
 //git config
 vi ~/.gitconfig
-git mergetool --tool=bc3	//bc3, meld, araxis, emerge...
-
+ssh-keygen -C "Ingookey@gmail.com" -t rsa
+git config --global user.email Ingookey@gmail.com
+git config --global user.name "Ingookey"
+git config --global diff.tool bc3  //bc3, meld, araxis, emerge...
+git config --global difftool.bc3.path "S:/Programs/Beyond\ Compare\ 4/BCompare.exe"
 
