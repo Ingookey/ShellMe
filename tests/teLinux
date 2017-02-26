@@ -23,12 +23,13 @@ find ./subFolder  -user ingookey -name '*.php'		// 查找属于ingookey用户的
 find ./subFolder -group ingoos	//查找属于特定用户组的文件
 
 stat ~/.bashrc	// stat可查看文件的atime, ctime, mtime
+chmod 777 fileName or directoryName	//0421
 find / -mtime +50 -mtime -100	//时间段内被修改的文件,ctime, mtime, atime
 find / -atime +50 -atime -100	//时间段内被访问的文件,50天之前，100之内
 find / -cmin -60	//状态发生改变折文件，cmin 改变， mmin 修改， amin访问，60分钟之内
 find / -size +50M -size -100M   //按文件大小查找
 find / -type f -exec ls -s {} \; | sort -n -r | head 5
 find / -exec ls -ld {} \;
-find / -type f -name "*.cpp" -exec rm -f {} \;
+find / -type f -name "*.cpp" -exec rm -f {} \; // -ok rm -f {} \; more security way
 find / -type d -name "dir*" -exec rm -rf {} \;
 find / -type f -empty			//查找空文件，d 空目录
