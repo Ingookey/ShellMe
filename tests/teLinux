@@ -38,3 +38,11 @@ find / -type f -empty			//查找空文件，d 空目录
 
 Diff
 diff file.1 file.2 	// -y, -c
+diff3 
+
+Git
+//git config
+vi ~/.gitconfig
+git mergetool --tool=bc3	//bc3, meld, araxis, emerge...
+
+
