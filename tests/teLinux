@@ -34,3 +34,7 @@ find / -exec ls -ld {} \;
 find / -type f -name "*.cpp" -exec rm -f {} \; // -ok rm -f {} \; more security way
 find / -type d -name "dir*" -exec rm -rf {} \;
 find / -type f -empty			//查找空文件，d 空目录
+
+
+Diff
+diff file.1 file.2 	// -y, -c
