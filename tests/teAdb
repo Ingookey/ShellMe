@@ -13,3 +13,13 @@ adb uninstall -k xxx.apk [-k: 卸载软件但是保留配置和缓存文件]
 // Grank/Revoke permission
 adb shell pm grant com.android.gallery3d android.permission.READ_CONTACTS
 adb shell pm revoke com.android.gallery3d android.permission.READ_CONTACTS
+
+// For debug
+adb logcat -s fullTag1 fullTag2
+adb logcat -v threadtime -s fullTag1 fullTag2
+adb logcat -v threadtime > debugLog.log
+adb logcat -v threadtime | grep 'segTag1'
+adb logcat -v threadtime | grep -E --color=auto "segTag1|segTag2"
+
+// Record video
+adb shell screenrecord /sdcard/recordVid.mp4
