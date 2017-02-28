@@ -1,6 +1,15 @@
-# ShellMe
+**ShellMe**
 
-ShellMe catalog:
-1. Common operations.
-2. Run Tests.
+*Purpose*
+
+1. Record common skills.
+
+*ShellMe catalog*
+
+1. Adb part.
+2. Linux part.
+3. Shell part.
+4. Windows part.
+
+
 
