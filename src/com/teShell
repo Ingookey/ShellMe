@@ -98,3 +98,14 @@ then
 else
     echo '两个文件都不存在'
 fi
+
+## 文件包含
+# Folder
+#     tes1.sh
+#     tes2.sh
+# In tes1.sh
+url="com.baidu.com"
+
+# In tes2.sh
+. ./tes1.sh  # source ./tes1.sh
+echo "Site: $url"
