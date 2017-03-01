@@ -32,3 +32,21 @@ echo "2-The all arrays is: ${arrays[@]}"
 # Get the size of arrays
 echo "1-The all arrays is: ${#arrays[*]}"
 echo "2-The all arrays is: ${#arrays[@]}"
+
+
+## printf
+# Example
+printf "%-10s %-8s %-4s\n" Name Gender TMkg  
+printf "%-10s %-8s %-4.2f\n" Alex Male 66.1234 
+printf "%10s %8s %4.2f\n" Aluis Male 89.1234
+
+printf "%d %s\n" 50 'string'
+printf '%s %d %s\n' string1 89 "string2"
+printf %s string
+
+printf "%s\t" string1 string2 string3
+printf %d 90
+
+printf "a \123 string, no processing:<%s>\t\n\f" "A\nB"
+printf "a \0003 string, no processing:<%b>\n" "A\nB"
+printf "www.runoob.com \a" 
