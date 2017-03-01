@@ -50,3 +50,51 @@ printf %d 90
 printf "a \123 string, no processing:<%s>\t\n\f" "A\nB"
 printf "a \0003 string, no processing:<%b>\n" "A\nB"
 printf "www.runoob.com \a" 
+
+
+## test command
+# 等于则为真 -eq -ne
+# 大于则为真 -gt -ge
+# 小于则为真 -lt le
+
+num1=100
+num2=100
+if test $[num1] -eq $[num2]
+then
+    echo '两个数相等！'
+else
+    echo '两个数不相等！'
+fi
+
+# 字符串测试
+# 等于/不等于则为真 =  ！=
+# 字串长度为0为真	-z
+# 字串长度不为0为真	-n
+num1="ru1noob"
+num2="runoob"
+if test $num1 = $num2
+then
+    echo '两个字符串相等!'
+else
+    echo '两个字符串不相等!'
+fi
+
+# 文件测试
+# 文件存在则为真 -e
+cd /bin
+if test -e ./bash
+then
+    echo '文件已存在!'
+else
+    echo '文件不存在!'
+fi
+
+# 逻辑控制
+# 与 -a  或-o  非 ！
+cd /bin
+if test -e ./notFile -o -e ./bash
+then
+    echo '有一个文件存在!'
+else
+    echo '两个文件都不存在'
+fi
