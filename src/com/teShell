@@ -17,3 +17,18 @@ elif ; then
 else
 fi
 
+## Arrays
+# How to initialize arrays
+arrays=(alex bina cuc)
+echo "The second is: ${arrays[1]}"
+
+arrays[3]=da
+echo "The four is: ${arrays[3]}"
+
+# Get all member of arrays
+echo "1-The all arrays is: ${arrays[*]}"
+echo "2-The all arrays is: ${arrays[@]}"
+
+# Get the size of arrays
+echo "1-The all arrays is: ${#arrays[*]}"
+echo "2-The all arrays is: ${#arrays[@]}"
