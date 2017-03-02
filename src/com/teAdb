@@ -5,6 +5,8 @@ adb shell reboot -p
 // 开启/关闭adb服务
 adb start-server
 adb kill-server
+adb shell ps							// 列出手机中所有正在运行的程序
+adb shell dumpsys activity activities	// 列出手机中所有正在运行的应用的详细信息
 
 // Install/Uninstall apk
 adb install -r xxx.apk 	 [-r: 保留已设定数据，重新安装apk]
@@ -23,3 +25,12 @@ adb logcat -v threadtime | grep -E --color=auto "segTag1|segTag2"
 
 // Record video
 adb shell screenrecord /sdcard/recordVid.mp4
+
+// Monkey
+How to run monkey? 
+adb shell monkey --ignore-crashes --ignore-timeouts --kill-process-after-error --throttle 50 -p packageName -v -v -v 200000
+
+// How to kill monkey by adb command?
+adb shell
+top | grep "monkey"
+kill -9 4529
