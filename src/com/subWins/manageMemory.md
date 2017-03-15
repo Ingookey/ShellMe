@@ -6,13 +6,23 @@
 
 ### Android内存限制 ###
 adb pull /system/build.prop   导出build文件，文件中有相关的阈值。
-1、dalvik.vm.heapgrowthlimit   单个应用程序最大内存限制，超过这个值会产生OOM
-2、dalvik.vm.heapsize          单个JAVA虚拟机最大的内存限制，超过这个值会产生OOM
-3、dalvik.vm.heapstartsize     应用程序启动后分配的初始内存，调节这个值会影响到应用的流畅性和整体RAM消耗。这个值越小，系统RAM消耗越慢；相反，这个值越大系统RAM消耗越快，但是程序更流畅。
+
+1. dalvik.vm.heapgrowthlimit   单个应用程序最大内存限制，超过这个值会产生OOM
+2. dalvik.vm.heapsize          单个JAVA虚拟机最大的内存限制，超过这个值会产生OOM
+3. dalvik.vm.heapstartsize     应用程序启动后分配的初始内存，调节这个值会影响到应用的流畅性和整体RAM消耗。这个值越小，系统RAM消耗越慢；相反，这个值越大系统RAM消耗越快，但是程序更流畅。
 
 ### How to get memory data？ ###
+- 查看某个应用的内存使用情况
+
     adb shell dumpsys meminfo -a $packagename/$pid
 	eg: adb shell dumpsys meminfo -a com.android.photos
+	![meminfo](http://omv02lbj4.bkt.clouddn.com/2017-03-15_215413.jpg)
+
+- 查看TaskStack
+	
+	adb shell dumpsys activity activities > Desktop\debug.txt
+	eg: 重定向到文件
+
 
 ### OOM common causes？ ###
 1. 非静态内部类的静态实例容易造成内存泄漏；
