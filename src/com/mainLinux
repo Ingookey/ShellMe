@@ -49,6 +49,9 @@ git config --global user.name "Ingookey"
 git config --global diff.tool bc3  //bc3, meld, araxis, emerge...
 git config --global difftool.bc3.path "S:/Programs/Beyond\ Compare\ 4/BCompare.exe"
 
+git并强制覆盖本地修改?
+git reset --hard
+git pull
 
 ## diff
 diff [-wV] [-n<文件名长度>] [-p<文件名长度>]
