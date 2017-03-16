@@ -1,3 +1,5 @@
+## Linux
+
 find [path] [option] [expression]
 1.
 find
@@ -35,23 +37,53 @@ find / -type f -name "*.cpp" -exec rm -f {} \; // -ok rm -f {} \; more security 
 find / -type d -name "dir*" -exec rm -rf {} \;
 find / -type f -empty			//查找空文件，d 空目录
 
-
+## Git
 Git
 Diff
 diff file.1 file.2 -y 	// -y 并排展示, -c 横排展示
 diff3 
 
-//git config
-vi ~/.gitconfig
-ssh-keygen -C "Ingookey@gmail.com" -t rsa
-git config --global user.email Ingookey@gmail.com
-git config --global user.name "Ingookey"
-git config --global diff.tool bc3  //bc3, meld, araxis, emerge...
-git config --global difftool.bc3.path "S:/Programs/Beyond\ Compare\ 4/BCompare.exe"
+Q: git config
 
-git并强制覆盖本地修改?
-git reset --hard
-git pull
+	vi ~/.gitconfig
+	ssh-keygen -C "Ingookey@gmail.com" -t rsa
+	git config --global user.email Ingookey@gmail.com
+	git config --global user.name "Ingookey"
+	git config --global diff.tool bc3  //bc3, meld, araxis, emerge...
+	git config --global difftool.bc3.path "S:/Programs/Beyond\ Compare\ 4/BCompare.exe"
+
+Q: git并强制覆盖本地修改?
+
+	git reset --hard
+	git pull
+
+Q: 如果Fork别人的项目或者多人合作项目，最好每人都拥有一个独立分支，然后由项目维护人合并，如何建立自己的分支？
+
+	git branch yourbranch 		// 分支的创建和合并
+	git checkout yourbranch    	// 切换到yourbranch
+ 
+	开发yourbranch分支，然后开发之后与master分支合并
+	git checkout master
+	git merge yourbranch
+	git branch -d yourbranch    // 合并完后删除本地分支
+
+Q: 如何将牛人的远程分支更新到自己的本地分支？
+
+	git remote						// 查看当前项目下远程
+	git remote add niuren giturl	// 增加新的分支链接，例如
+	git fetch niuren				// 获取牛人的远程更新
+	git merge niuren/master			// 将牛人的远程更新合并到本地分支
+
+Q: Git tools
+
+1. git@github.com:trybeee/GitStats.git
+	
+	统计自己的每个项目的工作量，从而看到工作进展
+
+	- git clone git://github.com/trybeee/GitStats.git
+	- python ~/dev/gitstats/git-stats /youproject public
+
+
 
 ## diff
 diff [-wV] [-n<文件名长度>] [-p<文件名长度>]
