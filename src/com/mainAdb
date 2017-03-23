@@ -34,3 +34,13 @@ adb shell monkey --ignore-crashes --ignore-timeouts --kill-process-after-error -
 adb shell
 top | grep "monkey"
 kill -9 4529
+
+
+// Kill process in device by adb
+adb shell top | grep packageName
+adb shell kill packageId
+
+import android.app.Instrumentation;
+import android.support.test.uiautomator.UiDevice;
+
+
