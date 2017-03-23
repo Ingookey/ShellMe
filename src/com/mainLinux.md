@@ -107,6 +107,15 @@ Q: file [-beLvz][-f <名称文件>][-m <魔法数字文件>...][文件或目录.
 
 ----------
 ## Git
+
+
+Q：git冲突处理？
+
+	A：1. eg. git rebase 冲突；
+	2. git mergetool -t opendiff  // 使用工具手机merge
+	3. git config --global core.trustctime false  // 冲突不在文件内容上时
+	   git rebase --skip	// 冲突不在文件内容上时
+
 Git
 Diff
 diff file.1 file.2 -y 	// -y 并排展示, -c 横排展示
