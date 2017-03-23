@@ -2,8 +2,22 @@
 
 Q: 在Linux中，如何kill process?
 
-	ps -e | grep “processName/processPart”
-	kill processId
+	List process?
+		ps -ef
+		ps -aux
+		ps -ef | grep processName/processPart
+		pgrep processName
+		pidof processName(Full name of process)
+
+	Kill process?
+		kill -s 9 processId
+		ps -ef | grep processName | grep -v grep | cut -c 9-14|xargs kill -s 9
+		pgrep processName|xargs kill -s 9
+		ps -ef|grep processName|awk '{print $2}'|xargs kill -s 9
+		kill -s 9 `ps -aux | grep processName | awk '{print $2}'`
+		kill -s 9 `pgrep processName`
+		pkill -9 processName
+		killall -9 processName(Full name of process)
 
 Q: find [path] [option] [expression]
 
