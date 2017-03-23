@@ -1,4 +1,17 @@
 ## Linux
+Q: 在命令行终端中查看某个目录的属性？
+
+	A:
+	man du,可检查系统中是否可用du命令，du -ch
+
+Q: 当切换到root用户时，使用su root 和su - root有什么区别？
+
+	A:
+	su - root
+		切换到root账号使用，使用的是root用户的环境变量；
+	su root
+		取得root的特权，以root的身份执行程序，但保留原来用户环境。
+	Note：有些命令即使你使用su root切换到root用户，仍无法执行，所以切换到root用户时，建议使用su - root
 
 Q: 在Linux中，如何kill process?
 
