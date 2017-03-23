@@ -1,5 +1,10 @@
 ## Linux
 
+Q: 在Linux中，如何kill process?
+
+	ps -e | grep “processName/processPart”
+	kill processId
+
 Q: find [path] [option] [expression]
 
 	find . -print
