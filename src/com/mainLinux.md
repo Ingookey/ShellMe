@@ -1,4 +1,36 @@
 ## Linux
+Q: 在命令行终端中查看某个目录的属性？
+
+	A:
+	man du,可检查系统中是否可用du命令，du -ch
+
+Q: 当切换到root用户时，使用su root 和su - root有什么区别？
+
+	A:
+	su - root
+		切换到root账号使用，使用的是root用户的环境变量；
+	su root
+		取得root的特权，以root的身份执行程序，但保留原来用户环境。
+	Note：有些命令即使你使用su root切换到root用户，仍无法执行，所以切换到root用户时，建议使用su - root
+
+Q: 在Linux中，如何kill process?
+
+	List process?
+		ps -ef
+		ps -aux
+		ps -ef | grep processName/processPart
+		pgrep processName
+		pidof processName(Full name of process)
+
+	Kill process?
+		kill -s 9 processId
+		ps -ef | grep processName | grep -v grep | cut -c 9-14|xargs kill -s 9
+		pgrep processName|xargs kill -s 9
+		ps -ef|grep processName|awk '{print $2}'|xargs kill -s 9
+		kill -s 9 `ps -aux | grep processName | awk '{print $2}'`
+		kill -s 9 `pgrep processName`
+		pkill -9 processName
+		killall -9 processName(Full name of process)
 
 Q: Linux中，如何kill process?
 
@@ -84,6 +116,15 @@ Q: file [-beLvz][-f <名称文件>][-m <魔法数字文件>...][文件或目录.
 
 ----------
 ## Git
+
+
+Q：git冲突处理？
+
+	A：1. eg. git rebase 冲突；
+	2. git mergetool -t opendiff  // 使用工具手机merge
+	3. git config --global core.trustctime false  // 冲突不在文件内容上时
+	   git rebase --skip	// 冲突不在文件内容上时
+
 Git
 Diff
 diff file.1 file.2 -y 	// -y 并排展示, -c 横排展示
