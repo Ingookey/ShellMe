@@ -1,9 +1,13 @@
 ## Linux
 
-Q: 在Linux中，如何kill process?
+Q: Linux中，如何kill process?
 
 	ps -e | grep “processName/processPart”
 	kill processId
+
+Q: Linux中的常用命令?
+
+	pstree -p[-a]	//以树状图的方式展现进程之间的派生关系，显示效果较直观
 
 Q: find [path] [option] [expression]
 
