@@ -13,6 +13,10 @@ Q: 当切换到root用户时，使用su root 和su - root有什么区别？
 		取得root的特权，以root的身份执行程序，但保留原来用户环境。
 	Note：有些命令即使你使用su root切换到root用户，仍无法执行，所以切换到root用户时，建议使用su - root
 
+Q: Linux中的常用命令?
+
+    pstree -p[-a]    //以树状图的方式展现进程之间的派生关系，显示效果较直观
+
 Q: 在Linux中，如何kill process?
 
 	List process?
