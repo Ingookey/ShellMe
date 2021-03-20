@@ -1262,7 +1262,7 @@ Add ssh-key on windows?
 
 #### eclipse
 
-Eclipse汉化地址
+Eclipse下载地址
 
 [http://www.eclipse.org/babel/downloads.php](http://www.eclipse.org/babel/downloads.php)
 
@@ -1471,6 +1471,48 @@ use information_schema; select table_name, table_rows from tables where TABLE_SC
 |                                                              | [易白 shell教程](https://www.yiibai.com/bash/)               |
 | [Advanced Bash-Scripting Guide 外网](http://tldp.org/LDP/abs/html/) | [GNU Coreutils](https://www.gnu.org/software/coreutils/manual/html_node/index.html#SEC_Contents) |
 |                                                              | [sed, a stream editor](https://www.gnu.org/software/sed/manual/sed.html#index-Copy-hold-space-into-pattern-space-168) |
+
+**expect**
+
+方式1
+
+```
+#!/usr/bin/expect -f
+
+set timeout 10
+# 切换到root用户, 然后执行ls和df命令:
+spawn su - root
+expect "Password*"
+send "123456\r"
+expect "]*"         # 通配符
+send "ls\r"
+expect "#*"         # 通配符的另一种形式
+send "df -Th\r"
+send "exit\r"       # 退出spawn开启的进程
+
+expect eof          # 退出此expect交互程序
+```
+
+方式2
+
+```
+#!/bin/bash
+
+ip="172.16.22.131"
+username="root"
+password="123456"
+
+# 指定执行引擎
+/usr/bin/expect <<EOF
+    set time 30
+    spawn ssh $username@$ip df -Th
+    expect {
+        "*yes/no" { send "yes\r"; exp_continue }
+        "*password:" { send "$password\r" }
+    }
+    expect eof
+EOF
+```
 
 
 
