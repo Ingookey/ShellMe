@@ -51,7 +51,7 @@ Win r -> services.msc -> 找到windows update并双击，然后点击禁用即�
 
 **字号对照表?**
 
-![In%20Yitu%202019%2005/image1.png](ingookey.tech.assets/image1.png)
+![In%20ingoo%202019%2005/image1.png](ingookey.tech.assets/image1.png)
 
 **win hotkey**
 
@@ -170,7 +170,7 @@ tail -f file      //实时动态显示文件内容
 wc -[lwc] file    //统计文件[行数，单词数，字节数]
 ```
 
-![In%20Yitu%202019%2005/image2.png](ingookey.tech.assets/image2.png)
+![In%20ingoo%202019%2005/image2.png](ingookey.tech.assets/image2.png)
 
 alias
 
@@ -452,7 +452,7 @@ $ ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 $ date
 
-![In%20Yitu%202019%2005/Untitled%203.png](ingookey.tech.assets/Untitled 3.png)
+![In%20ingoo%202019%2005/Untitled%203.png](ingookey.tech.assets/Untitled 3.png)
 
 其它
 
@@ -506,13 +506,13 @@ date +%R  //显示24小时制
 
     uptime // 查询服务器已经运行的时间，及(1,5,15min) 系统的平均负载量，负载量越低意味着你的系统性能越好free -m // display the amount of free and used system memory.df -i //磁盘 inode使用量的信息，最多可创建的文件个数，若inode资源用完了，即使有剩余空间也不能再创建文件;top -d 2 // 每隔2秒动态查看进程top -d 2 -p 85 // 每隔2秒动态查看pid为85的进程
 
-    ![In%20Yitu%202019%2005/image5.png](ingookey.tech.assets/image5.png)
+    ![In%20ingoo%202019%2005/image5.png](ingookey.tech.assets/image5.png)
 
-    ![In%20Yitu%202019%2005/image6.png](ingookey.tech.assets/image6.png)
+    ![In%20ingoo%202019%2005/image6.png](ingookey.tech.assets/image6.png)
 
-    ![In%20Yitu%202019%2005/image7.png](ingookey.tech.assets/image7.png)
+    ![In%20ingoo%202019%2005/image7.png](ingookey.tech.assets/image7.png)
 
-    ![In%20Yitu%202019%2005/image8.png](ingookey.tech.assets/image8.png)
+    ![In%20ingoo%202019%2005/image8.png](ingookey.tech.assets/image8.png)
 
 - ppa
 
@@ -1138,7 +1138,7 @@ Add ssh-key on windows?
 
   > 1. Docker是世界领先的软件容器平台。2. Docker使用Google公司推出的Go语言进行开发实现，基于Linux内核的cgroup，namespace，以及AUFS类的UnionFS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。 由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。Docke最初实现是基于LXC。3. Docker能够自动执行重复性任务，例如搭建和配置开发环境，从而解放了开发人员以便他们专注在真正重要的事情上：构建杰出的软件。4. 用户可以方便地创建和使用容器，把自己的应用放入容器。容器还可以进行版本管理、复制、分享、修改，就像管理普通的代码一样。
 
-  ![In%20Yitu%202019%2005/image9.png](ingookey.tech.assets/image9.png)
+  ![In%20ingoo%202019%2005/image9.png](ingookey.tech.assets/image9.png)
 
   Figure 1 docker引擎组件
 
@@ -1152,7 +1152,7 @@ Add ssh-key on windows?
 
   一句话概括容器：容器就是将软件打包成标准化单元，以用于开发、交付和部署。容器就是Docker中用来运行应用的，Docker的容器很轻量级，但功能很强悍(容器是可读写的)。也没有镜像，镜像简单理解就是容器的只读版本，用来方便存储与交流。
 
-  ![In%20Yitu%202019%2005/image10.png](ingookey.tech.assets/image10.png)
+  ![In%20ingoo%202019%2005/image10.png](ingookey.tech.assets/image10.png)
 
   Figure 2 docker架构
 
@@ -1168,7 +1168,7 @@ Add ssh-key on windows?
 
   > 1. 容器是一个应用层抽象，用于将代码和依赖资源打包在一起。 多个容器可以在同一台机器上运行，共享操作系统内核，但各自作为独立的进程在用户空间中运行 。与虚拟机相比， 容器占用的空间较少（约几十M），瞬间就能完成启动 。2. 虚拟机（VM）是一个物理硬件层抽象，用于将一台服务器变成多台服务器。 管理程序允许多个VM在一台机器上运行。每个VM都包含一整套操作系统、一个或多个应用、必要的二进制文件和库资源，因此占用大量空间。而且VM启动也十分缓慢 。3. 通过Docker官网，我们知道了这么多Docker的优势，但是大家也没有必要完全否定虚拟机技术，因为两者有不同的使用场景。虚拟机更擅长于彻底隔离整个运行环境。例如云服务提供商通常采用虚拟机技术隔离不同的用户。而Docker通常用于隔离不同的应用 ，例如前端，后端以及数据库。总之：容器虚拟化的是操作系统而不是硬件，容器之间是共享同一套操作系统资源的。虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统。因此容器的隔离级别会稍低一些。
 
-  ![In%20Yitu%202019%2005/image11.png](ingookey.tech.assets/image11.png)
+  ![In%20ingoo%202019%2005/image11.png](ingookey.tech.assets/image11.png)
 
   Figure 3 docker的真实应用场景
 
@@ -1186,21 +1186,21 @@ Add ssh-key on windows?
 
   > λ docker images
 
-  ![In%20Yitu%202019%2005/image12.png](ingookey.tech.assets/image12.png)
+  ![In%20ingoo%202019%2005/image12.png](ingookey.tech.assets/image12.png)
 
   如何运行镜像？运行之后镜像就变成了容器；
 
   > λ docker run -it docker.ubuntu:v7
 
-  ![In%20Yitu%202019%2005/image13.png](ingookey.tech.assets/image13.png)
+  ![In%20ingoo%202019%2005/image13.png](ingookey.tech.assets/image13.png)
 
   将容器转化为镜像？
 
   > 1. λ docker ps// 查看已经运行过哪些容器，才能通过其ID将容器转化为镜像//docker ps -a 此机器上所有运行过的容器；docker ps 目前正在运行的容器2. 将容器转化为一个新的镜像？sudo docker commit -m "add commit" -a "saymagic" 79c761f627f3 saymagic/ubuntu-nginx:v1-m参数指定提交的说明信息； -a参数指定用户信息；79c761f627f3代表容器的id；saymagic/ubuntu-nginx:v1指定目标镜像的用户名、仓库名和 tagλ docker commit -m "add alien command" 2b50e1fdb3d4 docker.ubuntu:v7通过build dockerfile命令来构建镜像？（此时镜像在当前路径）docker build -t="saymagic/ubuntu-nginx:v2" .1. 新建一个Folder docker.ubuntu, 在其中新建一个Dockerfile，并在其中添加相关命令2. docker build -t docker.ubuntu .3. 完成后，执行 docker run -td ubuntu
 
-  ![In%20Yitu%202019%2005/image14.png](ingookey.tech.assets/image14.png)
+  ![In%20ingoo%202019%2005/image14.png](ingookey.tech.assets/image14.png)
 
-  ![In%20Yitu%202019%2005/image15.png](ingookey.tech.assets/image15.png)
+  ![In%20ingoo%202019%2005/image15.png](ingookey.tech.assets/image15.png)
 
   删除不需要的镜像？
 
