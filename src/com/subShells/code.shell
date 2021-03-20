@@ -38,16 +38,11 @@ done
 # case control
 case 值 in
 case1)
-    command1
     command2
-    ...
-    commandN
+    
     ;;
 case2）
-    command1
     command2
-    ...
-    commandN
     ;;
 esac
 
