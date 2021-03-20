@@ -927,8 +927,6 @@ sudo apt-get install tmux
 
 ### vim
 
-basic
-
 ```
 set list/set nolist  是否显示换行符
 vi统计某个匹配出现的次数 :%s/hello world/&/gn
@@ -964,7 +962,10 @@ D：剪切从光标位置到行尾到剪贴板 C：和D类似，进入插入模
 
 ```
 1.命令模式，将光标放在第一行中要编辑的那个字母上；
-2.CTRL q3.5j  代表编辑以下的5行4.SHIFT i 光标又回到刚开始的地方5.ESC退出
+2.CTRL v
+3.5j  代表编辑以下的5行
+4.SHIFT i 光标又回到刚开始的地方
+5.ESC退出
 ```
 **大小写转换**
 
@@ -983,67 +984,64 @@ gU1G 从光标到文章第一个字符，都变为大写
 ```
 ### ansible & sshpass
 
-#### ansible
+**ansible**
 
-[http://www.ansible.com.cn/index.html](http://www.ansible.com.cn/index.html)
-
-Ansible是一款为类Unix系统开发的自由开源的配置和自动化工具；它用Python写成，类似于Chef和Puppet，但是有一个优点是不需要在其它节点中安装任何软件或配置。它使用SSH来和节点进行通信。
-
-link.基础性的应用
-
-[https://www.linuxidc.com/Linux/2015-10/123801.htm](https://www.linuxidc.com/Linux/2015-10/123801.htm)
-
-## common steps
-
+```
 1. /etc/ansible/hosts 维护着ansible中服务器的列表，修改它并取一个名字，eg:
-
-[test-servers]
-
+[myservers]
 192.168.1.9
-
 192.168.1.10
 
-2. ansible -m ping 'test-servers'
+2. ansible -m ping 'myservers'
+// 使用ping检查‘myservers’或者ansible节点的连通性
 
-// 使用ping检查‘test-servers’或者ansible节点的连通性
-
-3. ansible -m command -a "uname -r"'test-servers'
-
+3. ansible -m command -a "uname -r" 'myservers'
 // 检查节点的内核版本
 
-4. ansible -m command -a "df -Th"'test-servers'>/tmp/command-output.txt
-
+4. ansible -m command -a "df -Th" 'myservers' > /tmp/command-output.txt
 // 重定向输出到文件中
 
-ansible all -m shell -a 'hostname' -i ./ansible_host
+5. ansible all -m shell -a 'hostname' -i ./ansible_host
+// 通过 -i 可指定ansible_host的具体位置
+// 设置环境变量export ANSIBLE_HOSTS=./ansible_hostecho
+```
 
-// 使用自己指定位置的host文件
+如何在远程主机上都执行特定的脚本？
 
-**FAQ**
+```
+ansible myservers -m copy   -a "src=/opt/app/bin/targit.sh dest=~/"
+ansible myservers -m script -a "~/target.sh"
+```
 
-**通过什么方式指定hosts**
+| link                                                        | note          |
+| ----------------------------------------------------------- | ------------- |
+| [Ansible中文权威指南](http://www.ansible.com.cn/index.html) |               |
+| [link](https://www.linuxidc.com/Linux/2015-10/123801.htm)   | ansible的示例 |
+|                                                             |               |
 
-> 1. 通过 -i 指定具体的位置-i ./ansible_host2. 设置环境变量的方式export ANSIBLE_HOSTS=./ansible_hostecho $ANSIBLE_HOSTS
+**playbooks**
 
-### sshpass
 
-install sshpass?
 
-yum install sshpass
+| link                                                         | note                |
+| ------------------------------------------------------------ | ------------------- |
+| [playbooks](https://docs.ansible.com/ansible/playbooks.html) | playbooks的官方文档 |
+|                                                              |                     |
+|                                                              |                     |
 
+
+
+**sshpass**
+
+```
 sudo apt-get install sshpass
-
-simple use?
-
-export SSHPASS='***'
-
-echo $SSHPASS
-
+export SSHPASS='ip_passwd'
 sshpass -e ssh user@ip 'df -h'
+```
 
 
 
-## git & github & ssh-key
+### git & github & ssh-key
 
 [https://www.jianshu.com/p/038ccb3518f2](https://www.jianshu.com/p/038ccb3518f2) // git
 
@@ -1100,7 +1098,7 @@ Add ssh-key on windows?
 
 > 1. ssh-keygen -t rsa -C "hesq2@jpush.cn" -b 4096/c/Users/Alex.he/.ssh/id_rsa2. cat /c/Users/Alex.he/.ssh/id_rsa.pub | clip3. paste in web.
 
-**视频教程笔记**
+**git视频教程笔记**
 
 ```
 21. 如何让暂存区恢复成和HEAD(工作区)的一样？git reset HEAD, git status, git diff --cached
@@ -1282,7 +1280,7 @@ Checksyle
 
 
 
-#### vs code
+#### vscode
 
 **VS Code快捷键**
 
