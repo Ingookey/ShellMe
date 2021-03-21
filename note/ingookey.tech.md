@@ -1438,7 +1438,9 @@ docker rm {container-id}
 docker rmi {image-id}
 ```
 
-## database
+# 数据库
+
+## mysql
 
 ```
 查看数据库中某个用户的权限
@@ -1460,6 +1462,48 @@ LOAD DATA LOCAL INFILE “D:/mysql.txt” INTO TABLE MYTABLE;
 查看某个数据库中所有表的数据量
 use information_schema; select table_name, table_rows from tables where TABLE_SCHEMA = 'dbName' order by table_rows desc;
 ```
+
+## mongodb
+
+| [MySQL数据库学习宝典](http://c.biancheng.net/mysql/) | mysql的网络教程 |
+| ---------------------------------------------------- | --------------- |
+|                                                      |                 |
+|                                                      |                 |
+|                                                      |                 |
+
+
+
+# 数据结构与算法
+
+![image-20210321152544636](ingookey.tech.assets/image-20210321152544636.png)
+
+| link                                                    | note         |
+| ------------------------------------------------------- | ------------ |
+| [常用算法的时间复杂度](https://www.bigocheatsheet.com/) | 上图来自这里 |
+|                                                         |              |
+|                                                         |              |
+
+数组与链表
+
+```
+数组 array
+因内存管理器连续存储的特性，所以lookup o(1), insert o(n), delete o(n)
+为了改善数组插入与删除的时间复杂度
+
+链表 linked list
+lookup o(n), insert o(1), delete o(1)
+
+doubly linked list
+space o(n), prepend o(1), append o(1), lookup o(n), insert o(1), delete o(1)
+```
+
+| link                                                         | note |
+| ------------------------------------------------------------ | ---- |
+| [反转链表](https://leetcode-cn.com/problems/reverse-linked-list/) |      |
+| [两两反转](https://leetcode-cn.com/problems/swap-nodes-in-pairs/) |      |
+|                                                              |      |
+
+
 
 # script
 
@@ -1521,7 +1565,7 @@ EOF
 | Python教程                                                   |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [廖雪峰的python教程](https://www.liaoxuefeng.com/wiki/1016959663602400) | [python3-cookbook](https://python3-cookbook.readthedocs.io/zh_CN/latest/index.html) |
-|                                                              | [python标准库文档](https://docs.python.org/zh-cn/3/library/index.html) |
+|                                                              | [python在线中文文档](https://docs.python.org/zh-cn/3/)       |
 |                                                              |                                                              |
 
 > conda
