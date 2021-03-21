@@ -1477,11 +1477,11 @@ use information_schema; select table_name, table_rows from tables where TABLE_SC
 
 ![image-20210321152544636](ingookey.tech.assets/image-20210321152544636.png)
 
-| link                                                    | note         |
-| ------------------------------------------------------- | ------------ |
-| [常用算法的时间复杂度](https://www.bigocheatsheet.com/) | 上图来自这里 |
-|                                                         |              |
-|                                                         |              |
+| link                                                    | note          |
+| ------------------------------------------------------- | ------------- |
+| [常用算法的时间复杂度](https://www.bigocheatsheet.com/) | 上图来自这里  |
+| [leetcode.web](https://leetcode-cn.com/problemset/all/) | leetcode(i/b) |
+|                                                         |               |
 
 数组与链表
 
