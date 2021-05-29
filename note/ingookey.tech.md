@@ -1002,8 +1002,8 @@ gU1G 从光标到文章第一个字符，都变为大写
 // 重定向输出到文件中
 
 5. ansible all -m shell -a 'hostname' -i ./ansible_host
-// 通过 -i 可指定ansible_host的具体位置
-// 设置环境变量export ANSIBLE_HOSTS=./ansible_hostecho
+// 通过-i可指定ansible_host的具体位置
+// 设置环境变量export ANSIBLE_HOSTS=./ansible_host
 ```
 
 如何在远程主机上都执行特定的脚本？
@@ -1463,13 +1463,22 @@ LOAD DATA LOCAL INFILE “D:/mysql.txt” INTO TABLE MYTABLE;
 use information_schema; select table_name, table_rows from tables where TABLE_SCHEMA = 'dbName' order by table_rows desc;
 ```
 
+mysql.专题
+
+```
+
+```
+
+
+
 ## mongodb
 
-| [MySQL数据库学习宝典](http://c.biancheng.net/mysql/) | mysql的网络教程 |
-| ---------------------------------------------------- | --------------- |
-|                                                      |                 |
-|                                                      |                 |
-|                                                      |                 |
+| [mysql下载链接](https://dev.mysql.com/downloads/mysql/) | mysql官网下载地址 |
+| ------------------------------------------------------- | ----------------- |
+| [mysql数据库学习宝典](http://c.biancheng.net/mysql/)    | mysql网络教程     |
+|                                                         |                   |
+|                                                         |                   |
+|                                                         |                   |
 
 
 

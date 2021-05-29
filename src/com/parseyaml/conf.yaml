@@ -1,0 +1,26 @@
+BES_KEY:
+  EXTRACT_CMD:
+  - java
+  - -cpu
+  - 'o-op-152.jar:'
+  - o
+SIGN_FILE_LIST:
+- BIN_FILE1:
+    FILE_NAME: 修改
+    SWITCH: false
+- BIN_FILE2:
+    FILE_NAME: u2a.bin
+    SWITCH: true
+- BIN_FILE3:
+    FILE_NAME: yu.bin
+    SWITCH: true
+- BIN_FILE4:
+    FILE_NAME: op.bin
+    SWITCH: true
+- BIN_FILE5:
+    FILE_NAME: po.bin
+    SWITCH: true
+- BIN_FILE6:
+    FILE_NAME: io.bin
+    SWITCH: true
+- BIN_FILE7: null
