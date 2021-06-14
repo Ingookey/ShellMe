@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
+# cmake的官方文档：https://cmake.org/cmake/help/v3.20/guide/tutorial/index.html
 
 # 设定工程名和版本号
 project (cprojs VERSION 1.0)

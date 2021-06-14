@@ -2,6 +2,7 @@
 //#include "./easylogger/inc/elog_cfg.h"
 #include "demo.h"
 #include "leecode.h"
+#include <stdbool.h>
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
@@ -41,10 +42,22 @@ int main(int argc, char *argv[]) {
     printf("minimum number:%d \n", min);
 #endif
 
-#if 1
+#if 0
     fp = daoxu;
     (*fp)(numbers, sizeof(numbers) / sizeof(int));
-#endif
+
     // showtab();
+
+    int res = hammingWeight2(67);
+    printf("res:%d \n", res);
+
+    bool res = isPowerOfTwo(8);
+    printf("res:%d \n", res);
+#endif
+
+    int y = 0;
+    int *pSize = &y;
+    int *pNums = NULL;
+    pNums = countBits(9, pSize);
     return 0;
 }
