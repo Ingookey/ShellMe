@@ -93,12 +93,15 @@ int dfs(int n, int row, int col, int pie, int na) {
     // 将所有能放置皇后的位置由 0 变成 1，以便后续的位遍历
     int bits = ~(col | pie | na) & ((1 << n) - 1);
     while (bits > 0) {
-        int pick = bits & -bits; // 注: x & -x，取出最后一个1
+        // 注: x & -x，取出最后一个1; 对负数计算机存储的是补码
+        int pick = bits & -bits;
         res += dfs(n, row + 1, col | pick, (pie | pick) << 1, (na | pick) >> 1);
-        bits &= bits - 1; // 注: x & (x - 1), 去掉最后一个1
+        // 注: x & (x - 1), 去掉最后一个1
+        bits &= bits - 1;
     }
     return res;
 }
+
 /*
  * 52
  */

@@ -46,18 +46,19 @@ int main(int argc, char *argv[]) {
     fp = daoxu;
     (*fp)(numbers, sizeof(numbers) / sizeof(int));
 
-    // showtab();
 
     int res = hammingWeight2(67);
     printf("res:%d \n", res);
 
     bool res = isPowerOfTwo(8);
     printf("res:%d \n", res);
-#endif
 
     int y = 0;
     int *pSize = &y;
     int *pNums = NULL;
     pNums = countBits(9, pSize);
+#endif
+    showtab();
+
     return 0;
 }
