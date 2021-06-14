@@ -15,5 +15,5 @@ $(target):$(obj)
 
 .PHONY:clean
 clean:
-		rm *.o -f
+		rm $(obj) -f
 		rm main.exe -f

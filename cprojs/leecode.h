@@ -1,5 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void mainc();
-int *twoSum(int *nums, int numsSize, int target, int *returnSize);
+int minarray(int *pl, int size);
+int *twoSum(int *nums, int numsSize, int target);
